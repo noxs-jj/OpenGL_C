@@ -12,7 +12,18 @@
 
 #include "glide.h"
 
-void	2d_triforce()
+// ##################################
+// #								#
+// #			-x <- -> +x			#
+// #	+y							#
+// #	|			 				#
+// #				 0				#
+// #	|							#
+// #	-y							#
+// #								#
+// ##################################
+
+void	_2d_triforce()
 {
 	glBegin(GL_POLYGON);	// White polygon
 		glColor3ub(255, 255 , 255);

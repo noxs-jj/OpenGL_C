@@ -26,8 +26,8 @@
 
 void			keyboard(unsigned char touche, int x, int y);
 
-void			2d_triangle();
-void			2d_triforce();
+void			_2d_triangle();
+void			_2d_triforce();
 
 
 #endif

@@ -12,7 +12,18 @@
 
 #include "glide.h"
 
-void	2d_triangle()
+// ##################################
+// #								#
+// #			-x <- -> +x			#
+// #	+y							#
+// #	|			 				#
+// #				 0				#
+// #	|							#
+// #	-y							#
+// #								#
+// ##################################
+
+void	_2d_triangle()
 {
 	glBegin(GL_POLYGON);		// start of form
 		glColor3ub(255, 0 , 0);	// chose color of point on space

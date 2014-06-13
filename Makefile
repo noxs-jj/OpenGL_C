@@ -22,7 +22,10 @@ HEADER = glide.h
 NAME = open3d
 
 SRC = \
-main.c
+main.c \
+2d_triangle.c \
+2d_triforce.c \
+keyword.c
 
 OBJS = $(SRC:.c=.o)
 

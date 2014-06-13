@@ -12,6 +12,14 @@
 
 #include "glide.h"
 
+void reshape(int x, int y)
+{
+	if (x < y)
+		glViewport(0, (y - x) / 2, x, x);
+	if (y < x)
+		glViewport((x - y) / 2, 0, y, y);
+}
+
 int	main(int ac, char **av)
 {
 	glutInit(&ac, av);						// init glut
@@ -25,20 +33,12 @@ int	main(int ac, char **av)
 	glPointSize(1.0);						//set point size
 	glEnable(GL_DEPTH_TEST);
 
-
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	glLoadIdentity();
-
-
 	//glutDisplayFunc(_2d_triangle);		// function print screen
 	glutDisplayFunc(_2d_triforce);			// function print screen
-
-
-	glFlush();
-	glLoadIdentity();
-	glutSwapBuffers();
+	//glutDisplayFunc(_3d_triforce);			// function print screen
+	
 	glutKeyboardFunc(keyboard);				// function for keyboard event
-	//glutReshapeFunc(reshape); 			// TO WORK
+	glutReshapeFunc(reshape); 				// resize, form save proportion
 	glutMainLoop();							// program never return
 	return (0);
 }

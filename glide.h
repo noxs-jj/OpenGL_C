@@ -24,10 +24,12 @@
 # define STARTY	50
 # define TITLE	"OpenGL by NoXsNoNo"
 
+
 void			keyboard(unsigned char touche, int x, int y);
 
 void			_2d_triangle();
 void			_2d_triforce();
 
+void			_3d_triforce();
 
 #endif

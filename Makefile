@@ -10,9 +10,6 @@
 #                                                                              #
 #******************************************************************************#
 
-# Makefile parent who call Makefile soon from libft
-# add llvm- in CC= line if you need depends update of computer
-
 COMPIL = gcc -Wall -Wextra -Werror -w
 
 RM = rm -rf
@@ -20,6 +17,8 @@ RM = rm -rf
 HEADER = glide.h
 
 NAME = open3d
+
+PLATFORM := $(shell uname)
 
 SRC = \
 main.c \
@@ -30,7 +29,14 @@ keyword.c
 OBJS = $(SRC:.c=.o)
 
 LIB = libft/libft.a
+
+ifeq "$(PLATFORM)" "Darwin"
+#Mac
 GL = -framework GLUT -framework OpenGL -framework Cocoa
+else
+#Linux
+GL = -lGL -lGLU -lglut
+endif
 
 all : $(NAME)
 
@@ -41,7 +47,7 @@ $(LIB):
 	$(COMPIL) $(SRC) -I /libft -I /includes -c $<
 
 $(NAME): $(LIB) $(MLX) $(OBJS)
-	$(COMPIL) $(OBJS) -o $(NAME) $(GL) -L libft -lft
+	$(COMPIL) $(OBJS) -o $(NAME) $(GLMAC) -L libft -lft
 
 clean:
 	$(RM) $(OBJS)

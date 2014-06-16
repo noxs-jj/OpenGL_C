@@ -14,6 +14,8 @@
 
 void	keyboard(unsigned char touche, int x, int y)
 {
+	(void)x;
+	(void)y;
 	while (42)
 	{
 		if (touche == 'q')

@@ -15,14 +15,14 @@
 
 # include "libft/includes/libft.h"
 
-# ifdef __LINUX
-#  include <GL/gl.h>
-#  include <GL/glu.h>
-#  include <GL/glut.h>
+# ifndef __LINUX__
+#  include <GL/gl.h>		// Header File For The OpenGL32 Library
+#  include <GL/glu.h>		// Header File For The GLu32 Library
+#  include <GL/glut.h>		// Header File For The GLut Library
 # elif __APPLE__
-#  include <openGL/gl.h>		// Header File For The OpenGL32 Library
-#  include <openGL/glu.h>	// Header File For The GLu32 Library
-#  include <glut/glut.h>		// Header File For The GLut Library
+#  include <openGL/gl.h>		
+#  include <openGL/glu.h>		
+#  include <glut/glut.h>		
 # endif
 
 # define WINX	1024
@@ -40,3 +40,4 @@ void			_2d_triforce();
 void			_3d_triforce();
 
 #endif
+

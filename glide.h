@@ -19,10 +19,11 @@
 #  include <GL/gl.h>
 #  include <GL/glu.h>
 #  include <GL/glut.h>
-# elif __APPLE
+# elif __APPLE__
 #  include <openGL/gl.h>		// Header File For The OpenGL32 Library
 #  include <openGL/glu.h>	// Header File For The GLu32 Library
 #  include <glut/glut.h>		// Header File For The GLut Library
+# endif
 
 # define WINX	1024
 # define WINY	768

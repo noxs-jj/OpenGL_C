@@ -30,11 +30,9 @@ OBJS = $(SRC:.c=.o)
 
 LIB = libft/libft.a
 
-ifeq "$(PLATFORM)" "Darwin"
-#Mac
+ifeq "$(PLATFORM)" "Darwin" #Mac
 GL = -framework GLUT -framework OpenGL -framework Cocoa
-else
-#Linux
+else #Linux
 GL = -lGL -lGLU -lglut
 endif
 
@@ -47,7 +45,7 @@ $(LIB):
 	$(COMPIL) $(SRC) -I /libft -I /includes -c $<
 
 $(NAME): $(LIB) $(MLX) $(OBJS)
-	$(COMPIL) $(OBJS) -o $(NAME) $(GLMAC) -L libft -lft
+	$(COMPIL) $(OBJS) -o $(NAME) $(GL) -L libft -lft
 
 clean:
 	$(RM) $(OBJS)

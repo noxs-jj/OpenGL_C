@@ -10,8 +10,8 @@
 #                                                                              #
 #******************************************************************************#
 
-COMPIL = gcc -Wall -Wextra -Werror
-#COMPIL = clang -Wall -Wextra -Werror
+COMPIL = gcc -Wall -Wextra -Werror -w
+#COMPIL = clang -Wall -Wextra -Werror -w
 
 RM = rm -rf
 

@@ -15,15 +15,19 @@
 
 # include "libft/includes/libft.h"
 
-# ifndef __LINUX__
+# ifdef __LINUX__
 #	include <GL/gl.h>		// Header File For The OpenGL32 Library
 #	include <GL/glu.h>		// Header File For The GLu32 Library
 #	include <GL/glut.h>		// Header File For The GLut Library
-# elif __APPLE__
+# endif
+
+# ifdef __APPLE__
 #	include <openGL/gl.h>
 #	include <openGL/glu.h>
 #	include <glut/glut.h>
-# elif __WIN32__
+# endif
+
+# ifdef __WIN32__
 #	include <GL/gl.h>
 #	include <GL/glu.h>
 #	include <windows.h>		// Header File for Windows

@@ -37,7 +37,8 @@ LIB = libft/libft.a
 
 ifeq "$(PLATFORM)" "Darwin"	#Mac
 GL = -framework GLUT -framework OpenGL -framework Cocoa
-else						#Linux
+endif
+ifeq "$(PLATFORM)" "Linux"	#Linux
 GL = -lGL -lGLU -lglut
 endif
 ifeq "$(PLATFORM)" "Win32"	#Windows

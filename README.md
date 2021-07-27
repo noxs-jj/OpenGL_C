@@ -13,4 +13,4 @@ Website:	http://www.noxs.net
 
 Twitter:	http://twitter.com/jjmoiroux
 
-LinkedIn:	http://www.linkedin.com/pub/jean-jacques-moiroux/31/a89/a5/
+LinkedIn:	https://www.linkedin.com/in/jjacquesm/
